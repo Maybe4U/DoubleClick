@@ -14,10 +14,11 @@ import android.view.View;
  */
 public class GoTopTask extends AsyncTask<Integer, Integer, String> {
     private RecyclerView recyclerView;
-    private static final int STARTPOSITION = 10;//开始滑动的位置
+    private int STARTPOSITION;//开始滑动的位置
 
-    public GoTopTask(View view) {
+    public GoTopTask(View view , int start_p) {
         recyclerView = (RecyclerView) view;
+        STARTPOSITION = start_p;
     }
 
     @Override
